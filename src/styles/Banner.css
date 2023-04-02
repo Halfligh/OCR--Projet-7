@@ -5,8 +5,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 a:link,
@@ -15,8 +15,15 @@ a:visited {
   text-decoration: none;
   margin-left: 70px;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .logo {
   height: 50px;
+}
+
+a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
