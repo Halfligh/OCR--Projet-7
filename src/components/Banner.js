@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import '../styles/Banner.css'
 import Logo from '../assets-figma/LOGO.svg'
 
@@ -5,18 +7,10 @@ function Banner() {
     return ( 
     <div className='kasa-banner'>
         <img src={Logo} alt={'Logo'} className='logo'></img>
-        <ul className='navigation-ul'>
-            <li className='navigation-li'>
-                <a className='navigation-a'>
-                    <p>Accueil</p>
-                </a>
-            </li>
-            <li className='navigation-li'>
-                <a className='navigation-a'>
-                    <p>À propos</p>
-                </a>
-            </li>
-        </ul>
+        <nav classname='navigation-ul'>
+            <Link classname='navigation-li' to="/" >Accueil</Link>
+            <Link to="/about">À propos</Link>
+        </nav>
     </div>
     )
 }
