@@ -2,6 +2,7 @@ import '../../styles/App.css';
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import Card from '../../components/Card';
+import ImageWrapper from '../../components/ImageWrapper'
 
 import ImageTitle from '../../assets-figma/IMG.png'
 
@@ -20,11 +21,7 @@ function Home() {
   return (
   <div className='layout'>
     <Banner />
-    <div className='home-image-wrapper'>
-      <div className='opacity'/>
-      <img className='home-image' src={ImageTitle} alt='Paysage montagne'/>
-      <h1 className='home-subtitle'> Chez vous, partout et ailleurs</h1>
-    </div>
+    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs"/>
     <div className='card-list'>{renderCards()}</div>
     <Footer />
   </div>
