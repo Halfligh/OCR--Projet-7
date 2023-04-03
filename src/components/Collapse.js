@@ -35,6 +35,8 @@ const Collapse = ({ title, subtitle }, index, array)  => {
   const subtitleStyles = {
     display: 'flex',
     justifyContent: 'center',
+    color: '#FF6060',
+    fontSize: 24,
     backgroundColor: '#F6F6F6',
     height: isOpen ? 'auto' : '0px',
     overflow: 'hidden',
