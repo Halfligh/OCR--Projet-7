@@ -1,0 +1,29 @@
+.a{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.big-title {
+    height: 20%;
+    font-size: 288px;
+    line-height: 10px;
+    color: #FF6060;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+}
+
+

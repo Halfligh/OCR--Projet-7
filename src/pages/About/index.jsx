@@ -46,7 +46,7 @@ function About() {
         <Collapse key={item.id} title={item.title} subtitle={item.subtitle} />
       ))}
     </div>
-    <Footer />
+    <Footer scrollEffect={false} />
   </div>
   )
 }

@@ -2,6 +2,7 @@
 
 .layout {
   width: 85%;
+  height: 100vh;  
   margin-left: auto;
   margin-right: auto;
   font-family: 'Montserrat', sans-serif;
@@ -14,8 +15,10 @@
   background-color: #F6F6F6;
   padding: 50px;
   border-radius: 25px;
+  padding-bottom: 150px;
 }
 
 .collapses {
-  padding-bottom: 20px;
+  padding-bottom: 150px;
+
 }

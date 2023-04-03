@@ -23,7 +23,7 @@ function Home() {
     <Banner />
     <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs"/>
     <div className='card-list'>{renderCards()}</div>
-    <Footer />
+    <Footer scrollEffect={true} />
   </div>
   )
 }
