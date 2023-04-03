@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import './styles/index.css'
 import Home from './pages/Home';
@@ -18,6 +18,7 @@ root.render(
             <Route path="/accommodation" element={<Accommodation />} />
             <Route path="/about" element={<About />} />
             <Route path="/error" element={<Error />} />
+            <Route path="*" element={<Navigate to="/error" replace />} />
         </Routes>
     </Router>
 </React.StrictMode>
