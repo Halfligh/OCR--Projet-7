@@ -3,7 +3,7 @@ import '../styles/Card.css'
 
 function Card({ id, cover, title }) {
   return (
-    <Link to={`/accommodation/${title}`}>
+    <Link to={`/accommodation/${id}`}>
       <div className='card-wrapper'>
         <div className='opacity-gradient'/>
         <img className='card-img' src={cover} alt={title} />

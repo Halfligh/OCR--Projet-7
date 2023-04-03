@@ -40,7 +40,7 @@ function About() {
   return (
   <div className='layout'>
     <Banner />
-    <ImageWrapper src={ImageAbout} alt='Paysage montagne'/>
+    <ImageWrapper src={ImageAbout} alt='Paysage montagne' height={200}/>
     <div className='collapses'>
       {data.map((item) => (
         <Collapse key={item.id} title={item.title} subtitle={item.subtitle} />

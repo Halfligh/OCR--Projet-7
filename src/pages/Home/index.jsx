@@ -14,14 +14,14 @@ function Home() {
   // Génération des cards selon la data
   function renderCards() {
     return logements.map((item) => (
-      <Card key={item.id} cover={item.cover} title={item.title} />
+      <Card id={item.id} cover={item.cover} title={item.title} />
     ));
   }
 
   return (
   <div className='layout'>
     <Banner />
-    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs"/>
+    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs" height={200}/>
     <div className='card-list'>{renderCards()}</div>
     <Footer scrollEffect={true} />
   </div>

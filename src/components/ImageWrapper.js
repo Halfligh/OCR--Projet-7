@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ImageWrapper({ src, alt, text }) {
+function ImageWrapper({ src, alt, text, height, clean, gradient }) {
   const backgroundStyles = {
-    height: '200px',
+    height: height,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -16,8 +16,9 @@ function ImageWrapper({ src, alt, text }) {
     left: 0,
     height: '100%',
     width: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: gradient ? null : 'rgba(0, 0, 0, 0.3)',
     borderRadius: 25,
+    background: gradient ? 'linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.42))' : null, 
   };
 
   const homeSubtitleStyles = {
@@ -35,7 +36,7 @@ function ImageWrapper({ src, alt, text }) {
 
   return (
     <div style={backgroundStyles}>
-        <div style={overlayStyles}/>
+        <div style={clean ? null : overlayStyles}/>
         <img src={src} alt={alt} style={imageStyles} />
         <h1 style={homeSubtitleStyles}>{text}</h1>
     </div>
