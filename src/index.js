@@ -15,7 +15,7 @@ root.render(
     <Router>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/accommodation" element={<Accommodation />} />
+            <Route path="/accommodation/:id" element={<Accommodation />} />
             <Route path="/about" element={<About />} />
             <Route path="/error" element={<Error />} />
             <Route path="*" element={<Navigate to="/error" replace />} />

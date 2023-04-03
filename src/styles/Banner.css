@@ -9,21 +9,20 @@
     padding-bottom: 50px;
 }
 
-a:link,
-a:visited {
+.navigation:link,
+.navigation:visited {
   color: #FF6060;
   text-decoration: none;
   margin-left: 70px;
   font-size: 24px;
   font-weight: 500;
 }
-
-.logo {
-  height: 50px;
-}
-
-a.active {
+.navigation.active {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+.logo {
+  height: 50px;
 }

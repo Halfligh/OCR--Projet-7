@@ -10,8 +10,8 @@ function Banner() {
     <div className='kasa-banner'>
       <img src={Logo} alt={'Logo'} className='logo'></img>
       <nav classname='navigation-ul'>
-        <Link className={`navigation-li ${location.pathname === "/" ? "active" : ""}`} to="/">Accueil</Link>
-        <Link className={`navigation-li ${location.pathname === "/about" ? "active" : ""}`} to="/about">À propos</Link>
+        <Link className={`navigation ${location.pathname === "/" ? "active" : ""}`} to="/">Accueil</Link>
+        <Link className={`navigation ${location.pathname === "/about" ? "active" : ""}`} to="/about">À propos</Link>
       </nav>
     </div>
   )
