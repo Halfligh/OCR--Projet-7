@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import '../../styles/App.css';
@@ -7,7 +8,17 @@ import SlideShow from '../../components/Slideshow';
 import data from '../../data/logements.json'
 
 
-function Accommodation() {
+function Accommodation({ pageInfo }) {
+
+  // Génération des informations de la page 
+  useEffect(() => {
+    document.title = pageInfo.title;
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute("content", pageInfo.description);
+    }
+  }, [pageInfo]);
 
   // Récupération du params 
   const { id } = useParams();

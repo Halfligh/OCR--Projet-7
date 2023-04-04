@@ -1,13 +1,14 @@
-import '../../styles/App.css';
+import React, { useEffect } from 'react';
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import ImageWrapper from '../../components/ImageWrapper';
 import Collapse from '../../components/Collapse';
 
+import '../../styles/App.css';
 import ImageAbout from '../../assets-figma/IMG-about.png'
 
 
-function About() {
+function About({ pageInfo }) {
 
   const data = [
     {
@@ -36,6 +37,15 @@ function About() {
     },
   ];
 
+  // Génération des informations de la page 
+  useEffect(() => {
+    document.title = pageInfo.title;
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute("content", pageInfo.description);
+    }
+  }, [pageInfo]);
 
   return (
   <div className='layout'>

@@ -1,15 +1,16 @@
-import '../../styles/App.css';
+import React, { useEffect } from 'react';
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import Card from '../../components/Card';
 import ImageWrapper from '../../components/ImageWrapper'
 
+import '../../styles/App.css';
 import ImageTitle from '../../assets-figma/IMG.png'
 
 import logements from '../../data/logements.json'
 
 
-function Home() {
+function Home({ pageInfo }) {
 
   // Génération des cards selon la data
   function renderCards() {
@@ -17,6 +18,16 @@ function Home() {
       <Card id={item.id} cover={item.cover} title={item.title} />
     ));
   }
+
+  // Génération des infos de la page 
+  useEffect(() => {
+    document.title = pageInfo.title;
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute("content", pageInfo.description);
+    }
+  }, [pageInfo]);
 
   return (
   <div className='layout'>
