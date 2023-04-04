@@ -1,0 +1,49 @@
+.kasa-title {
+    color: #FF6060;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 10px;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #FF6060;
+    font-weight: 500;
+}
+
+.top-section {
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.host-name {
+    font-size: 18px;
+    color: #FF6060;
+    font-weight: 500;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    text-align: end;
+}
+
+.host-pic {
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.star {
+    height: 24.75px;
+    padding: 7.5px;
+}
