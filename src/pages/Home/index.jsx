@@ -21,7 +21,7 @@ function Home() {
   return (
   <div className='layout'>
     <Banner />
-    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs" height={200}/>
+    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs" height={200} gradient/>
     <div className='card-list'>{renderCards()}</div>
     <Footer scrollEffect={true} />
   </div>

@@ -39,6 +39,6 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.70) 5%, rgba(255, 255, 255, 0.308) 100%);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.50) 1%, rgba(255, 255, 255, 0.308) 100%);
     border-radius: 10px;
   }

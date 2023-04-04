@@ -38,11 +38,10 @@ const Collapse = ({ title, subtitle }, index, array)  => {
     color: '#FF6060',
     fontSize: 24,
     backgroundColor: '#F6F6F6',
-    height: isOpen ? 'auto' : '0px',
+    height: '0px',
     overflow: 'hidden',
-    padding: isOpen ? '18px' : '0px',
-    transition: 'opacity 0.5s ease-in, padding 0.5s ease-in-out',
-    animation: isOpen ? 'slideDown 0.5s ease-in-out forwards' : '',
+    animation: isOpen ? 'slideUp 0.5s ease-in forwards' : 'slideDown 0.5s ease-in-out forwards',
+    animationDelay:  '0.1s',
     opacity: isOpen ? 1 : 0,
     borderRadius : 5,
   };
@@ -61,7 +60,7 @@ const Collapse = ({ title, subtitle }, index, array)  => {
         <img style={arrowStyles} src={arrowIcon} alt='Flèche' />
       </div>
       <div style={subtitleStyles}>
-        <p>{subtitle}</p>
+        <p style={{padding : 10}}>{subtitle}</p>
       </div>
     </div>
   );

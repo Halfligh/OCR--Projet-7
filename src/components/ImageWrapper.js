@@ -36,7 +36,7 @@ function ImageWrapper({ src, alt, text, height, clean, gradient }) {
 
   return (
     <div style={backgroundStyles}>
-        <div style={clean ? null : overlayStyles}/>
+        <div style={overlayStyles}/>
         <img src={src} alt={alt} style={imageStyles} />
         <h1 style={homeSubtitleStyles}>{text}</h1>
     </div>
