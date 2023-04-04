@@ -50,7 +50,7 @@ const Collapse = ({ title, subtitle }, index, array)  => {
     height: 25,
     width: 25,
     paddingRight: 18,
-    animation: `${isOpen ? 'rotateDown' : 'rotateUp'} 0.5s ease-in-out forwards`,
+    animation: `${isOpen ? 'rotateDown' : 'rotateUp'} 0.5s ease-out forwards`,
   };
 
   return (
