@@ -47,13 +47,23 @@ function About({ pageInfo }) {
     }
   }, [pageInfo]);
 
+
+  const collapseWrapper = {
+    paddingBottom : 150, 
+    display: 'flex',
+    flexDirection : 'column',
+    width: window.innerWidth < 599 ? '100%' : '90%',
+    marginLeft : 'auto',
+    marginRight : 'auto',
+  }
+
   return (
   <div className='layout'>
     <Banner />
-    <ImageWrapper src={ImageAbout} alt='Paysage montagne' height={200}/>
-    <div className='collapses'>
+    <ImageWrapper src={ImageAbout} alt='Paysage montagne' height={200} marginBottom={20}/>
+    <div style={collapseWrapper}>
       {data.map((item) => (
-        <Collapse key={item.id} title={item.title} subtitle={item.subtitle} open={false} width={'90%'}/>
+        <Collapse key={item.id} title={item.title} titleSize={window.innerWidth < 599 ? 13 : 24} subtitle={item.subtitle} subtitleSize={window.innerWidth < 599 ? 12 : 24} open={false} width={'100%'} marginBottom={20}/>
       ))}
     </div>
     <Footer scrollEffect={false} />
