@@ -26,3 +26,47 @@
 .logo {
   height: 50px;
 }
+
+
+@media (max-width: 599px) {
+
+.kasa-banner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo{
+  height: 40px;
+}
+
+.navigation:link,
+.navigation:visited {
+  font-size: 12px;
+  margin-left: 20px;
+  text-transform:uppercase;
+}
+
+}
+
+@media (max-width: 340px) {
+  
+  .logo{
+    height: 40px;
+  }
+  
+  .navigation:link,
+  .navigation:visited {
+    font-size: 12px;
+    margin-left: 20px;
+    text-transform:uppercase;
+    padding: 5px;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+

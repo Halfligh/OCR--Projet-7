@@ -13,11 +13,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #F6F6F6;
-  padding: 50px;
+  padding: 0px;
   border-radius: 25px;
-  padding-bottom: 150px;
-}
-
-.collapses {
   padding-bottom: 150px;
 }

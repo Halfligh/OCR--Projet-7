@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import arrowIcon from '../assets-figma/arrow-icon.svg';
 import '../styles/keyframes.css'
 
-const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, flexDirection,dataList })  => {
+const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, flexDirection, dataList, marginBottom  })  => {
   const [isCollapseOpen, setIsCollapseOpen] = useState(isOpen);
 
   const handleClick = () => {
@@ -13,13 +13,13 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
     width: width,
     marginLeft: width ? null : 'auto',
     marginRight: width ? null : 'auto',
-    marginBottom: 31,
+    marginBottom: marginBottom ? marginBottom : 31,
     backgroundColor: '#F6F6F6',
     borderRadius: 5,
   }
 
   const titleStyles = {
-    height: 42,
+    height: window.innerWidth < 599 ? 30 : 42,
     display: 'flex',
     alignItems: 'center',
     cursor: 'pointer',
@@ -45,11 +45,12 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
     borderRadius : 5,
     flexDirection : flexDirection ? flexDirection : null,
     fontWeight: 400,
+    lineHeight: window.innerWidth < 599 ? '18px' : '35px', 
   };
 
   const arrowStyles = {
-    height: 25,
-    width: 25,
+    height: window.innerWidth < 599 ? 16 : 25,
+    width: window.innerWidth < 599 ? 16 : 25,
     paddingRight: 18,
     animation: `${isCollapseOpen ? 'rotateUp' : 'rotateDown'} 0.5s ease-out forwards`,
   };
@@ -62,6 +63,10 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
   const listStyles = {
     paddingLeft: 0,
     paddingBottom : 5,
+  }
+
+  const subtitleText = {
+    padding: window.innerWidth < 599 ? 10 : 20,
   }
 
   return (
@@ -77,7 +82,7 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
             <li style={listStyles} key={index}>{thing}</li>
           ))}
        </ul> 
-        ) : ( <p style={{padding : 20}}>{subtitle}</p> )}
+        ) : ( <p style={subtitleText}>{subtitle}</p> )}
       </div>
     </div>
   );

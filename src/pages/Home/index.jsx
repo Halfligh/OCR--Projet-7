@@ -29,11 +29,22 @@ function Home({ pageInfo }) {
     }
   }, [pageInfo]);
 
+  // Modules CSS
+  const cardList = {
+    padding: window.innerWidth < 599 ? 0 : 30,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    backgroundColor: window.innerWidth > 599 ? '#F6F6F6' : 'white',
+    borderRadius: '25px',
+    paddingBottom: '150px',
+    }
+
   return (
   <div className='layout'>
     <Banner />
     <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs" height={200} gradient/>
-    <div className='card-list'>{renderCards()}</div>
+    <div style={cardList}>{renderCards()}</div>
     <Footer scrollEffect={true} />
   </div>
   )
