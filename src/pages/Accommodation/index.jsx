@@ -6,6 +6,7 @@ import '../../styles/Accommodation.css'
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import SlideShow from '../../components/Slideshow';
+import Collapse from '../../components/Collapse';
 
 import redStar from '../../assets-figma/red-star.svg'
 import greyStar from '../../assets-figma/grey-star.svg'
@@ -40,7 +41,11 @@ function Accommodation({ pageInfo }) {
         <div>
           <h1 className='kasa-title'>{kasa.title}</h1>
           <h2 className='sub-title'>{kasa.location}</h2>
-          <p>tags</p>
+          <div>
+          {kasa.tags.map(tag => (
+              <span key={tag} className='tag'>{tag}</span>
+          ))}
+          </div>
         </div>
         <div className='host-wrap'>
           <div className='host'>
@@ -55,11 +60,16 @@ function Accommodation({ pageInfo }) {
           ))}
         </div>
     </section>
-    <section>
+    <section className='bottom-section'>
+      <div className='semi-collapse'>
+        <Collapse title={'Description'} subtitle={kasa.description} open={false} titleSize={18} subtitleSize={18}/>
+      </div>
+      <div className='semi-collapse'>
+        <Collapse title={'Équipements'} dataList={kasa.equipments} open={false} titleSize={18} subtitleSize={18}/>
+      </div>
+    </section>  
     
-    </section>
-    
-    <Footer />
+    <Footer scrollEffect={true}/>
   </div>
   )
 }

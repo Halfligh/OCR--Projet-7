@@ -12,11 +12,11 @@
 }
 
 .top-section {
-    padding-bottom: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 25px;
 }
 
 .host {
@@ -46,4 +46,29 @@
 .star {
     height: 24.75px;
     padding: 7.5px;
+}
+
+.tag {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.bottom-section {
+    padding-bottom: 200px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.semi-collapse {
+    width: 45%;
 }
