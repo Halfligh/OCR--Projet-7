@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import arrowIcon from '../assets-figma/arrow-icon.svg';
 import '../styles/keyframes.css'
 
-const Collapse = ({ title, subtitle }, index, array)  => {
-  const [isOpen, setIsOpen] = useState(false);
+const Collapse = ({ title, subtitle, isOpen })  => {
+  const [isCollapseOpen, setIsCollapseOpen] = useState(isOpen);
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setIsCollapseOpen(!isCollapseOpen);
   };
 
   const wraperStyles = {
@@ -38,11 +38,10 @@ const Collapse = ({ title, subtitle }, index, array)  => {
     color: '#FF6060',
     fontSize: 24,
     backgroundColor: '#F6F6F6',
-    height: '0px',
     overflow: 'hidden',
-    animation: isOpen ? 'slideUp 0.5s ease-in forwards' : 'slideDown 0.5s ease-in-out forwards',
-    animationDelay:  '0.1s',
-    opacity: isOpen ? 1 : 0,
+    transition: 'height 0.5s ease-in-out',
+    height: isCollapseOpen ? 'auto' : 0,
+    opacity: isCollapseOpen ? 1 : 0,
     borderRadius : 5,
   };
 
@@ -50,7 +49,7 @@ const Collapse = ({ title, subtitle }, index, array)  => {
     height: 25,
     width: 25,
     paddingRight: 18,
-    animation: `${isOpen ? 'rotateDown' : 'rotateUp'} 0.5s ease-out forwards`,
+    animation: `${isCollapseOpen ? 'rotateUp' : 'rotateDown'} 0.5s ease-out forwards`,
   };
 
   return (

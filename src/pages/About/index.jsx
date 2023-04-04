@@ -43,7 +43,7 @@ function About() {
     <ImageWrapper src={ImageAbout} alt='Paysage montagne' height={200}/>
     <div className='collapses'>
       {data.map((item) => (
-        <Collapse key={item.id} title={item.title} subtitle={item.subtitle} />
+        <Collapse key={item.id} title={item.title} subtitle={item.subtitle} open={false}/>
       ))}
     </div>
     <Footer scrollEffect={false} />
