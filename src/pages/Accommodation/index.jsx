@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import '../../styles/App.css';
 import '../../styles/Accommodation.css'
@@ -27,11 +27,29 @@ function Accommodation({ pageInfo }) {
   }, [pageInfo]);
 
   // Récupération du params 
-  const { id } = useParams();
+    const { id } = useParams();
 
 
   // Recherche de l'id de la kasa dans la data
-  const kasa = data.find(item => item.id === id);
+    const kasa = data.find(item => item.id === id);
+
+  // Récupération de la fonction de navigation
+    const navigate = useNavigate();
+
+  // Vérification que l'objet est trouvé sinon redirection
+
+  useEffect(() => {
+    // Vérifier si l'id existe dans la data
+    if (!data.map(item => item.id).includes(id)) {
+      console.log("Redirection vers la page erreur");
+      navigate('/error');
+    }
+  }, );
+
+  // Si kasa est undefined, rendre un composant nul le temps de la redirection
+  if (!kasa) {
+    return null; 
+  }
 
   return (
   <div className='layout'>
