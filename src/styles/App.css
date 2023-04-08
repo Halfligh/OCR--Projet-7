@@ -17,3 +17,9 @@
   border-radius: 25px;
   padding-bottom: 150px;
 }
+
+@media (max-width: 599px) {
+  .layout {
+    width: 90%;
+  }
+}

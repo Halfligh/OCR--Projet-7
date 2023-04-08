@@ -13,7 +13,7 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
     width: width,
     marginLeft: width ? null : 'auto',
     marginRight: width ? null : 'auto',
-    marginBottom: marginBottom ? marginBottom : 31,
+    marginBottom: marginBottom ? marginBottom : 33,
     backgroundColor: '#F6F6F6',
     borderRadius: 5,
   }

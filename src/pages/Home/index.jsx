@@ -33,8 +33,8 @@ function Home({ pageInfo }) {
   const cardList = {
     padding: window.innerWidth < 599 ? 0 : 30,
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    flexWrap: 'wrap', 
+    justifyContent: 'space-around',
     backgroundColor: window.innerWidth > 599 ? '#F6F6F6' : 'white',
     borderRadius: '25px',
     paddingBottom: '150px',
@@ -43,7 +43,8 @@ function Home({ pageInfo }) {
   return (
   <div className='layout'>
     <Banner />
-    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez vous, partout et ailleurs" height={200} gradient/>
+    <ImageWrapper src={ImageTitle} alt='Paysage montagne' text="Chez&nbsp;vous, partout&nbsp;et&nbsp;ailleurs"
+ height={window.innerWidth < 599 ? 120 : 200} marginBottom={'30px'} gradient/>
     <div style={cardList}>{renderCards()}</div>
     <Footer scrollEffect={true} />
   </div>

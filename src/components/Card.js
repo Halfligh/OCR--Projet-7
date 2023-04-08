@@ -6,10 +6,10 @@ function Card({ id, cover, title }) {
 // Modules CSS
   const cardWrapper = {
     position: 'relative',
-    width: window.innerWidth < 599 ? '100%' : 350,
-    height: window.innerWidth < 599 ? '100%' : 350,
+    width: window.innerWidth < 599 ? '100%' : window.innerWidth/4, 
+    height: window.innerWidth < 599 ? 225 : window.innerWidth/4,
     borderRadius: 10,
-    marginBottom: 50,
+    margin: window.innerWidth < 599 ? 0 : 10, 
   }
 
   const linkWrapper = {

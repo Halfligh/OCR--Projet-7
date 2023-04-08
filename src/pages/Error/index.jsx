@@ -31,7 +31,7 @@ useEffect(() => {
           <Link className='navigation-error' to="/">Retourner sur la page d'accueil</Link>
         </div>
       </div>
-      <Footer scrollEffect={false} />
+      <Footer scrollEffect={true} />
     </div>
   )
 }
