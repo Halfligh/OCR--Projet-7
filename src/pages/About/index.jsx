@@ -66,7 +66,7 @@ function About({ pageInfo }) {
         <Collapse key={item.id} title={item.title} titleSize={window.innerWidth < 599 ? 13 : 24} subtitle={item.subtitle} subtitleSize={window.innerWidth < 599 ? 12 : 24} open={false} width={'100%'} marginBottom={window.innerWidth < 599 ? 20 : 33 }/>
       ))}
     </div>
-    <Footer scrollEffect={true} />
+    <Footer scrollEffect={window.innerWidth < 599 ? false : true}/>
   </div>
   )
 }

@@ -58,6 +58,7 @@ const Collapse = ({ title, subtitle, titleSize, subtitleSize, isOpen, width, fle
   const ulStyles = {
     listStyle : 'none',
     width: '100%',
+    padding : window.innerWidth < 599 ? 10 : 20,
   }
 
   const listStyles = {

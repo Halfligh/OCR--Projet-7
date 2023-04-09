@@ -54,12 +54,12 @@ function Accommodation({ pageInfo }) {
   return (
   <div className='layout'>
     <Banner />
-    <SlideShow pictures={kasa.pictures} alt='Logement' height={415}/>
+    <SlideShow pictures={kasa.pictures} alt='Logement' height={window.innerWidth < 599 ? 250 : 450 }/>
     <section className='top-section'>
         <div>
           <h1 className='kasa-title'>{kasa.title}</h1>
           <h2 className='sub-title'>{kasa.location}</h2>
-          <div>
+          <div className='tag-wrapper'>
           {kasa.tags.map(tag => (
               <span key={tag} className='tag'>{tag}</span>
           ))}
@@ -70,24 +70,26 @@ function Accommodation({ pageInfo }) {
             <p className='host-name'>{kasa.host.name}</p>
             <img className ='host-pic' src={kasa.host.picture} alt='host portrait'></img>
           </div>
+          <div>
           { Array.from({ length: parseInt(kasa.rating)}, (_, index) => (
               <img key={index} className='star' src={redStar} alt='étoile rouge'/>
             ))}
           {Array.from({ length: 5 - parseInt(kasa.rating)}, (_, index) => (
               <img key={index} className='star' src={greyStar} alt='étoile grise'/> 
           ))}
+          </div>
         </div>
     </section>
     <section className='bottom-section'>
       <div className='semi-collapse'>
-        <Collapse title={'Description'} subtitle={kasa.description} open={false} titleSize={18} subtitleSize={18}/>
+        <Collapse title={'Description'} subtitle={kasa.description} open={false} titleSize={window.innerWidth < 599 ? 13 : 18} subtitleSize={window.innerWidth < 599 ? 12 : 18} marginBottom={window.innerWidth < 599 ? 15 : 33 }/>
       </div>
       <div className='semi-collapse'>
-        <Collapse title={'Équipements'} dataList={kasa.equipments} open={false} titleSize={18} subtitleSize={18}/>
+        <Collapse title={'Équipements'} dataList={kasa.equipments} open={false} titleSize={window.innerWidth < 599 ? 13 : 18} subtitleSize={window.innerWidth < 599 ? 12 : 18}/>
       </div>
     </section>  
     
-    <Footer scrollEffect={true}/>
+    <Footer scrollEffect={window.innerWidth < 599 ? false : true}/>
   </div>
   )
 }

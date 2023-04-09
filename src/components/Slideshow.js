@@ -3,7 +3,7 @@ import ImageWrapper from '../components/ImageWrapper';
 import BulletPoint from './BulletPoint';
 import SharpArrow from '../assets-figma/sharp-arrow-icon.svg';
 
-function SlideShow({ id, src, alt, text, height, pictures }) {
+function SlideShow({ id, src, alt, text, marginBottom, height, pictures }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = pictures;
@@ -24,7 +24,7 @@ function SlideShow({ id, src, alt, text, height, pictures }) {
 
 
   const containerStyles = {
-    position: 'relative', // Ajout de la propriété position relative sur l'élément parent
+    position: 'relative',
   };
 
   const arrowWrapStyles = {
@@ -45,10 +45,12 @@ function SlideShow({ id, src, alt, text, height, pictures }) {
   const leftArrowStyles = {
     transform: 'rotate(180deg)', // Ajout de la rotation à gauche
     cursor : 'pointer',
+    height: window.innerWidth < 599 ? 20 : null, 
   };
   
   const rightArrowStyles = {
     cursor : 'pointer',
+    height: window.innerWidth < 599 ? 20 : null, 
   };
 
 
@@ -63,7 +65,7 @@ function SlideShow({ id, src, alt, text, height, pictures }) {
   const showArrowsAndBullets = images.length > 1;
 
   return (
-    <div style={containerStyles}> {/* Ajout de styles sur l'élément parent */}
+    <div style={containerStyles}>
      
      {showArrowsAndBullets && (
         <div style={arrowWrapStyles}>
@@ -72,7 +74,7 @@ function SlideShow({ id, src, alt, text, height, pictures }) {
         </div>
         )}
 
-      <ImageWrapper src={images[currentIndex]} alt={alt} height={height} gradient/>
+      <ImageWrapper src={images[currentIndex]} alt={alt} height={height} marginBottom={window.innerWidth < 599 ? 1 : marginBottom} gradient/>
 
       {showArrowsAndBullets && (
         <div style={bulletPointsStyles}>
