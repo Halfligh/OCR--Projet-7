@@ -24,6 +24,7 @@ function ImageWrapper({ src, alt, text, height, clean, gradient, marginBottom })
   const homeSubtitleStyles = {
     position: 'absolute',
     color: 'white',
+    textAlign: window.innerWidth < 599 ? 'start' : 'center',
     fontSize: window.innerWidth < 599 ? 24 : 48,
     fontWeight: window.innerWidth < 599 ? 500 : 800,
     padding: window.innerWidth < 599 ? 20 : null,

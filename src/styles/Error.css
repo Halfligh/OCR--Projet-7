@@ -11,14 +11,23 @@
     line-height: 10px;
     color: #FF6060;
     font-weight: 700;
+    position: absolute;
+    top : 10%
 }
 
 .subtitle {
     position: absolute;
+    text-align: center;
     font-size: 36px;
     font-weight: 500;
     color: #FF6060;
-    bottom: 20%;
+    top: 65%
+}
+
+.link{
+    position: absolute;
+    top: 85%;
+    padding-bottom: 200px;
 }
 
 .navigation-error:link,
@@ -44,13 +53,13 @@
     }
 
     .subtitle {
-        position: relative;
         font-size: 18px;
         font-weight: 500;
-        color: #FF6060;
-        text-align: center;
-        margin-top: -50px;
-        margin-bottom: 50px;
+        top: 42%;
+    }
+
+    .link {
+        top : 60%
     }
 
     .navigation-error:link,

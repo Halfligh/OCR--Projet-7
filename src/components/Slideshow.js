@@ -76,7 +76,9 @@ function SlideShow({ id, src, alt, text, marginBottom, height, pictures }) {
 
       <ImageWrapper src={images[currentIndex]} alt={alt} height={height} marginBottom={window.innerWidth < 599 ? 1 : marginBottom} gradient/>
 
-      {showArrowsAndBullets && (
+      { window.innerWidth > 599 ? 
+      (
+      showArrowsAndBullets && (
         <div style={bulletPointsStyles}>
           {images.map((image, index) => (
             <BulletPoint
@@ -86,7 +88,9 @@ function SlideShow({ id, src, alt, text, marginBottom, height, pictures }) {
             />
           ))}
         </div>
-        )}
+        ) )
+         : null }
+  
 
     </div>
   );

@@ -1,5 +1,4 @@
 TO-DO List : 
-- Make the responsive for mobile [WIP]
 - Make the global review
 
 

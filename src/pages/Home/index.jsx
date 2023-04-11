@@ -14,8 +14,8 @@ function Home({ pageInfo }) {
 
   // Génération des cards selon la data
   function renderCards() {
-    return logements.map((item) => (
-      <Card id={item.id} cover={item.cover} title={item.title} />
+    return logements.map((item, index) => (
+      <Card id={item.id} key={index} cover={item.cover} title={item.title} />
     ));
   }
 
@@ -30,6 +30,7 @@ function Home({ pageInfo }) {
   }, [pageInfo]);
 
   // Modules CSS
+
   const cardList = {
     padding: window.innerWidth < 599 ? 0 : 30,
     display: 'flex',

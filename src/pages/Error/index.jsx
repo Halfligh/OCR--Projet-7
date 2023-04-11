@@ -27,11 +27,11 @@ useEffect(() => {
         <div className='subtitle'>
         <p>Oups ! La page que vous demandez n'existe pas.</p>
         </div>
-        <div>
+        <div className='link'>
           <Link className='navigation-error' to="/">Retourner sur la page d'accueil</Link>
         </div>
       </div>
-      <Footer scrollEffect={window.innerWidth < 599 ? false : true} />
+      <Footer scrollEffect={true}/>
     </div>
   )
 }

@@ -6,15 +6,18 @@ function Card({ id, cover, title }) {
 // Modules CSS
   const cardWrapper = {
     position: 'relative',
-    width: window.innerWidth < 599 ? '100%' : window.innerWidth/4, 
-    height: window.innerWidth < 599 ? 225 : window.innerWidth/4,
+    width: '100%',
+    height: '100%',
     borderRadius: 10,
     margin: window.innerWidth < 599 ? 0 : 10, 
+    zIndex : 2,
   }
 
   const linkWrapper = {
     marginBottom: '30px',
-  }
+    width: window.innerWidth < 599 ? '100%' : window.innerWidth < 1024 ? window.innerWidth / 3 : window.innerWidth / 4,
+    height: window.innerWidth < 599 ? 225 : window.innerWidth < 1024 ? window.innerWidth / 3 : window.innerWidth / 4,
+  };
 
   return (
     <Link style= {linkWrapper} to={`/accommodation/${id}`}>
