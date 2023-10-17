@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import usePageInfo from '../../utils/usePagesInfos';
 
 import '../../styles/App.css';
 import '../../styles/Accommodation.css'
@@ -15,17 +16,7 @@ import data from '../../data/logements.json'
 
 
 function Accommodation({ pageInfo }) {
-
-  // Génération des informations de la page 
-  useEffect(() => {
-    document.title = pageInfo.title;
-
-    const descriptionMeta = document.querySelector('meta[name="description"]');
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute("content", pageInfo.description);
-    }
-  }, [pageInfo]);
-
+  usePageInfo(pageInfo);
   // Récupération du params 
     const { id } = useParams();
 

@@ -1,21 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import usePageInfo from '../../utils/usePagesInfos';
 import '../../styles/Error.css'
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 
 
 function Error({ pageInfo }) {
-
-// Génération des infos de la page
-useEffect(() => {
-  document.title = pageInfo.title;
-
-  const descriptionMeta = document.querySelector('meta[name="description"]');
-  if (descriptionMeta) {
-    descriptionMeta.setAttribute("content", pageInfo.description);
-  }
-}, [pageInfo]);
+  usePageInfo(pageInfo);
 
   return (
     <div className='layout'>

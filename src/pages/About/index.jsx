@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import usePageInfo from '../../utils/usePagesInfos';
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import ImageWrapper from '../../components/ImageWrapper';
@@ -9,7 +10,8 @@ import ImageAbout from '../../assets-figma/IMG-about.png'
 
 
 function About({ pageInfo }) {
-
+  usePageInfo(pageInfo);
+  
   const data = [
     {
       id: 1,
@@ -36,17 +38,6 @@ function About({ pageInfo }) {
         "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
     },
   ];
-
-  // Génération des informations de la page 
-  useEffect(() => {
-    document.title = pageInfo.title;
-
-    const descriptionMeta = document.querySelector('meta[name="description"]');
-    if (descriptionMeta) {
-      descriptionMeta.setAttribute("content", pageInfo.description);
-    }
-  }, [pageInfo]);
-
 
   const collapseWrapper = {
     paddingBottom : 150, 
